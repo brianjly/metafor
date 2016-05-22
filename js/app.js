@@ -8,3 +8,11 @@ $(window).scroll(function(){
     nav.removeClass("fixnav");
   }
 });
+
+
+$(function(){
+
+  $("#searchimg").click(function(){
+      $("#searchbar").fadeToggle();
+  });
+});
