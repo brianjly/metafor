@@ -91,10 +91,10 @@ nav {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   #container #news {
-    width: 70%;
+    width: 69%;
     height: 600px;
     background-color: white;
-    border-top: 6px solid #8A2632; }
+    border-left: 6px solid #8A2632; }
     #container #news #newsheader {
       height: 50px;
       width: 97%;
@@ -105,21 +105,22 @@ nav {
         margin: 0;
         padding: 0 0 0 10px; }
     #container #news .newsitem {
-      width: 97%;
+      width: 95%;
+      height: 150px;
       background-color: rgba(1, 1, 1, 0);
       margin: 15px auto;
       box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5); }
       #container #news .newsitem h1 {
         text-align: center;
-        margin: 0; }
+        margin: 0;
+        float: right; }
       #container #news .newsitem .newsimage {
-        width: 20%;
-        margin: 10px 15px; }
+        height: 100%; }
   #container #features {
-    width: 27%;
-    height: 600px;
+    width: 26%;
+    height: 250px;
     background-color: white;
-    border-top: 6px solid #7E7F94;
+    border-left: 6px solid #7E7F94;
     margin-left: 20px; }
     #container #features #featuresheader {
       height: 50px;
@@ -130,8 +131,6 @@ nav {
       #container #features #featuresheader h1 {
         margin: 0;
         padding: 0 0 0 10px; }
-    #container #features #video {
-      margin: 0 auto; }
 
 #login-overlay {
   position: fixed;
