@@ -19,15 +19,15 @@
 
   <div id="whiteback"></div>
 
-  <div id="login-overlay">
-
-  </div>
+  <div id="login-overlay"></div>
 
   <nav>
     <ul>
-      <li id="leftli"><a href="#">STATS</a></li>
-      <li><a href="#">GUIDES</a></li>
-      <li><a href="#">METAS</a></li>
+      <li id="leftli"><a href="#"><h1>STATS</h1></a></li>
+      <li><a href="#"><h1>GUIDES</h1></a></li>
+      <li><a href="#"><h1>META</h1></a></li>
+      <li><a href="#"><h1>FORUM</h1></a></li>
+
     </ul>
 
     <button>LOGIN</button>
@@ -38,23 +38,65 @@
 
   <div id="container">
 
-    <div id="news">
+    <div id="columncontainer">
 
+      <div id="news">
 
       <div class="newsitem">
-        <div class="newsimagebox newsimage1"></div>
-        <div class="headlinecontainer">
+
+        <div id="newsimagebox" class="newsimage1">
+          <div class="title">
+            <h1>
+              NEWS AND UPDATES
+            </h1>
+          </div>
+        </div>
+
+        <div id="headlinecontainer">
           <div class="headline"><h1></h1></div>
           <div class="headline"><h1></h1></div>
           <div class="headline"><h1></h1></div>
           <div class="headline"><h1></h1></div>
           <div class="headline"><h1></h1></div>
         </div>
+      </div>
+    </div>
+
+
+
+    <div id="meta">
+
+      <div id="metaheader">
+        <h1>
+          OUR META PICKS
+        </h1>
+      </div>
+
+      <div id="metabox">
+        <div id="topcharacters">
+          <div class="character"><img src="images/heroeshead/reaper.png"/></div>
+          <div class="character"><img src="images/heroeshead/tracer.png"/></div>
+          <div class="character"><img src="images/heroeshead/lucio.png"/></div>
+          <div class="character"><img src="images/heroeshead/reinhardt.png"/></div>
+          <div class="character"><img src="images/heroeshead/genji.png"/></div>
+          <div class="character"><img src="images/heroeshead/winston.png"/></div>
+
+        </div>
+
+        <div id="topteamcomps">
+          <div class="teamcomp"></div>
+          <div class="teamcomp"></div>
+          <div class="teamcomp"></div>
+
+
+        </div>
 
       </div>
 
 
     </div>
+  </div>
+
 
 
     <div id="features">
@@ -82,20 +124,17 @@
 
       </div>
 
-      <div class="guidebox">
-        <div class="guideboximage"/>
-
-        </div>
-
-      </div>
-
-
     </div>
 
 
-
-
   </div>
+
+  <footer>
+
+  </footer>
+
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script src="js/app.js"></script>

@@ -1,10 +1,12 @@
 $black: #1D1D1E;
 $yellow: #FFCE0F;
 $red: #8A2632;
-$green: #7E7F94;
+$green: #61d553;
+
 $header: rgba(22,22,22,0.1);
 $headerhover: rgba(22,22,22,0.3);
 $featureheader: rgb(43, 195, 242);
+$characterselect: #9a6b92;
 
 @font-face {
     font-family: goodtimes;
@@ -18,6 +20,7 @@ body {
 
   padding: 0;
   margin: -10px 0 0 0;
+  z-index: -1;
 
 }
 
@@ -31,12 +34,15 @@ body {
   background: -moz-linear-gradient(white 50%, $black);
 
   position: absolute;
+  z-index: -1;
 
 }
 
+///////////////////////////////////////////////////NAVBAR
+
 nav {
   width: 85%;
-  height: 54px;
+  height: 40px;
   background-color: $yellow;
   border-top-left-radius: 1px;
   border-bottom-left-radius: 1.5em;
@@ -45,7 +51,7 @@ nav {
 
   position: fixed;
   right:0;
-  top: 35px;
+  top: 23px;
   padding-left: 30px;
   z-index: 1;
   transition: 0.3s;
@@ -65,11 +71,14 @@ nav {
 
   li{
     width: 90px;
-    height: 38px;
+    height: 40px;
     float: left;
     text-align: center;
-    padding-top: 17px;
     transition: 0.3s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
 
     border-right: 1px dotted rgba(#808080, 0.51);
 
@@ -79,10 +88,9 @@ nav {
   }
 
   li a{
-    font-size: 1.4em;
     text-decoration: none;
     color: black;
-    font-size: 1.0em;
+    font-size: 0.6em;
 
   }
 
@@ -123,18 +131,17 @@ nav {
 
 }
 
-.fixnav{
-  top: 5px;
-  width: 40%;
-}
 
 
 #logo{
-  width:100px;
+  width:150px;
+  height:100px;
   position: absolute;
-  top: 15px;
-  left: 45px;
-  z-index: 1;
+  left:-20px;
+  top: 10px;
+  opacity: 0.7;
+
+  z-index: 0;
 
 }
 
@@ -144,7 +151,7 @@ nav {
   width: 90%;
 
   margin: 10px auto;
-  top:100px;
+  top:70px;
   position: relative;
   padding: 10px;
   display: flex;
@@ -152,64 +159,80 @@ nav {
   flex-wrap: wrap;
 
 
-  ///////////////  CHILDREN
 
+//////////////FIRST COLUMN
 
+#columncontainer{
 
-  ////////////////  news box
+  width: 70%;
+  height: auto;
 
+  //////////////////////////////////////////////////  NEWS
 
 
   #news{
 
-    width: 70%;
-    height: 600px;
+    width: 100%;
+    height: 300px;
     background-color: rgba(255,255,255, 0);
 
-
-    #newsheader{
-      height:50px;
-      width:97%;
-      background-color: $header;
-      margin: 10px auto;
-      box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.5);
-
-
-      h1{
-        margin: 0;
-        padding: 0 0 0 10px;
-        }
-      }
+    .newsimage1{
+      background: url("../images/tracer.jpg");
+      background-size: cover;
+    }
 
     .newsitem{
       width:97%;
-      height:50%;
-      background-color: rgba(255, 255, 255, 1);
+      height:300px;
       margin:10px 15px;
       box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.5);
-      display: flex;
+
+
 
       h1{
         text-align: center;
         float:right;
       }
 
-      .newsimagebox{
+      #newsimagebox{
         top: 0;
         width: 50%;
         height: 100%;
+        padding:5px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float:left;
+
+
+
+        .title{
+          width: 100%;
+          background-color: rgba(0,0,0,0.4);
+          font-size: 0.8em;
+          height:50px;
+
+          h1{
+            float:left;
+            padding-left: 10px;
+            width: 100%;
+            color: white;
+          }
+
+        }
       }
 
-      .newsimage1{
-        background: url("../images/tracer.jpg");
-        background-size: cover;
-      }
 
-
-      .headlinecontainer{
+      #headlinecontainer{
         width:50%;
         height:100%;
         padding-top: 5px;
+        float:left;
+        background-color: rgba(255, 255, 255, 1);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
 
         .headline{
           width:98%;
@@ -226,12 +249,102 @@ nav {
 
       }
 
+  }
+
+  //////////////////////////////////////////////////////  METABOX
+
+  #meta{
+    height:400px;
+    width:100%;
+
+
+    #metaheader{
+      height:50px;
+      width:97%;
+      background-color: $featureheader;
+      margin: 20px auto 5px auto;
+      padding: 0;
 
 
 
+      h1{
+        margin: 0;
+        padding-top: 8px;
+        text-align: center;
+        font-size: 1.7em;
+
+        }
+      }
+
+    #metabox{
+      height:300px;
+      width: 97%;
+      margin: auto;
+
+
+      #topcharacters{
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        padding: 5px;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+
+        .character{
+          height: 135px;
+          width:97px;
+          margin:5px;
+          float: left;
+          background-color: $header;
+          overflow: hidden;
+          border-top: 4px solid $red;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.7);
+
+
+
+
+          img{
+            max-height: 130%;
+            max-width: 100%;
+          }
+        }
+
+        .character:hover{
+          background-color: $headerhover;
+
+
+        }
+
+      }
+
+      #topteamcomps{
+        width: 50%;
+        height: 100%;
+        background-color: rgb(92, 92, 92);
+        float: left;
+
+        .teamcomp{
+          width:100%;
+          height: 60px;
+          background-color: white;
+          margin-top: 30px;
+        }
+
+
+      }
+
+    }
 
   }
-  ////////////////  play of the week
+
+}
+  //////////////////////////////////////////////////////////Featured guides
 
   #features{
     width: 27%;
@@ -244,7 +357,7 @@ nav {
       height:50px;
       width:100%;
       background-color: $featureheader;
-      margin: 10px auto;
+      margin: 10px auto 5px auto;
 
 
 
@@ -262,8 +375,12 @@ nav {
       width:100%;
       height:200px;
       background-color: white;
-      padding: 3px;
+      padding: 8px;
       margin-bottom: 8px;
+      border-top: 4px solid $green;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
 
       .guideboximage{
         width:45%;
@@ -289,6 +406,22 @@ nav {
   }
 }
 
+
+
+footer{
+
+    width:100%;
+    height:200px;
+    background-color: white;
+    position: relative;
+    margin-top: 70px;
+
+
+  }
+
+
+
+
 #login-overlay{
   position: fixed;
   width: 100%;
@@ -299,8 +432,52 @@ nav {
   display: none;
 }
 
+@media (max-width:600px){
+
+  #container #features{
+      height:790px;
+    }
+
+
+
+  #container #columncontainer #news{
+    height: 600px;
+  }
+  #container #columncontainer #meta {
+    height: 600px;
+
+  }
+
+  #container #columncontainer #meta #metabox #topcharacters{
+    width: 100%;
+  }
+
+
+  #container #columncontainer #meta #metabox #topteamcomps{
+    width: 100%;
+  }
+
+  #container #columncontainer #news .newsitem #newsimagebox{
+    width: 100%;
+  }
+
+  #container #columncontainer #news .newsitem #headlinecontainer{
+    width: 100%;
+  }
+
+
+
+}
+
+
 @media (max-width:950px){
-    #container #news{
+
+    #container #features{
+        height:770px;
+    }
+
+
+    #container #columncontainer{
       width: 100%;
     }
 
@@ -313,10 +490,20 @@ nav {
     #logo{
       opacity: 0.3;
     }
+
+    .fixnav{
+      top: 5px;
+      width: 90%;
+    }
 }
 
 @media (min-width:1140px){
   #container #features{
     width: 28%;
+  }
+
+  .fixnav{
+    top: 5px;
+    width: 40%;
   }
 }
