@@ -3,26 +3,26 @@
   src: url(../goodtimes.ttf); }
 
 body {
-  background-color: #1D1D1E;
+  background-color: #d1d2d4;
   font-family: 'goodtimes', sans-serif;
   font-style: italic;
   padding: 0;
   margin: -10px 0 0 0;
   z-index: -1; }
 
-#whiteback {
-  height: 325px;
+#particles-js {
+  height: 60%;
   width: 100%;
-  background-color: white;
-  background: linear-gradient(white 50%, #1D1D1E);
-  background: -moz-linear-gradient(white 50%, #1D1D1E);
-  position: absolute;
+  background-color: black;
+  background: linear-gradient(black 70%, #d1d2d4);
+  background: -moz-linear-gradient(black 70%, #d1d2d4);
+  position: fixed;
   z-index: -1; }
 
 nav {
   width: 85%;
   height: 40px;
-  background-color: #FFCE0F;
+  background-color: #f99c23;
   border-top-left-radius: 1px;
   border-bottom-left-radius: 1.5em;
   box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.5);
@@ -79,14 +79,13 @@ nav {
   position: absolute;
   left: -20px;
   top: 10px;
-  opacity: 0.7;
   z-index: 0; }
 
 #container {
   height: 100%;
   width: 90%;
   margin: 10px auto;
-  top: 70px;
+  top: 270px;
   position: relative;
   padding: 10px;
   display: -ms-flexbox;
@@ -100,14 +99,14 @@ nav {
     height: auto; }
     #container #columncontainer #news {
       width: 100%;
-      height: 300px;
+      height: 250px;
       background-color: rgba(255, 255, 255, 0); }
       #container #columncontainer #news .newsimage1 {
         background: url("../images/tracer.jpg");
         background-size: cover; }
       #container #columncontainer #news .newsitem {
         width: 97%;
-        height: 300px;
+        height: 250px;
         margin: 10px 15px;
         box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.5); }
         #container #columncontainer #news .newsitem h1 {
@@ -119,130 +118,247 @@ nav {
           height: 100%;
           padding: 5px;
           box-sizing: border-box;
-          float: left; }
+          float: left;
+          position: relative; }
+          #container #columncontainer #news .newsitem #newsimagebox .title:before {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            width: 97%;
+            height: 55px;
+            background-color: black;
+            filter: blur(1px);
+            -moz-filter: blur(1px);
+            -webkit-filter: blur(1px); }
           #container #columncontainer #news .newsitem #newsimagebox .title {
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
             font-size: 0.8em;
-            height: 50px; }
+            height: 55px;
+            z-index: 1; }
             #container #columncontainer #news .newsitem #newsimagebox .title h1 {
-              float: left;
-              padding-left: 10px;
               width: 100%;
-              color: white; }
-        #container #columncontainer #news .newsitem #headlinecontainer {
-          width: 50%;
-          height: 100%;
-          padding-top: 5px;
-          float: left;
-          background-color: white;
-          box-sizing: border-box; }
-          #container #columncontainer #news .newsitem #headlinecontainer .headline {
-            width: 98%;
-            height: 18%;
-            margin: 0 auto 5px auto;
-            background-color: rgba(22, 22, 22, 0.1); }
-          #container #columncontainer #news .newsitem #headlinecontainer .headline:hover {
-            background-color: rgba(22, 22, 22, 0.3); }
-    #container #columncontainer #meta {
-      height: 400px;
-      width: 100%; }
-      #container #columncontainer #meta #metaheader {
-        height: 50px;
-        width: 97%;
-        background-color: #2bc3f2;
-        margin: 20px auto 5px auto;
-        padding: 0; }
-        #container #columncontainer #meta #metaheader h1 {
-          margin: 0;
-          padding-top: 8px;
-          text-align: center;
-          font-size: 1.7em; }
-      #container #columncontainer #meta #metabox {
-        height: 300px;
-        width: 97%;
-        margin: auto; }
-        #container #columncontainer #meta #metabox #topcharacters {
-          width: 50%;
-          height: 100%;
-          background-color: white;
-          padding: 5px;
-          box-sizing: border-box;
-          float: left; }
-          #container #columncontainer #meta #metabox #topcharacters .character {
-            height: 135px;
-            width: 97px;
-            margin: 5px;
-            float: left;
-            background-color: rgba(22, 22, 22, 0.1);
-            overflow: hidden;
-            border-top: 4px solid #8A2632;
-            box-sizing: border-box;
-            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.7); }
-            #container #columncontainer #meta #metabox #topcharacters .character img {
-              max-height: 130%;
-              max-width: 100%; }
-          #container #columncontainer #meta #metabox #topcharacters .character:hover {
-            background-color: rgba(22, 22, 22, 0.3); }
-        #container #columncontainer #meta #metabox #topteamcomps {
-          width: 50%;
-          height: 100%;
-          background-color: #5c5c5c;
-          float: left; }
-          #container #columncontainer #meta #metabox #topteamcomps .teamcomp {
-            width: 100%;
-            height: 60px;
-            background-color: white;
-            margin-top: 30px; }
-  #container #features {
-    width: 27%;
-    height: 300px;
-    margin-left: 20px; }
-    #container #features #featuresheader {
-      height: 50px;
-      width: 100%;
-      background-color: #2bc3f2;
-      margin: 10px auto 5px auto; }
-      #container #features #featuresheader h1 {
-        margin: 0;
-        padding: 12px 0 0 10px;
+              color: white;
+              position: absolute;
+              z-index: 5; }
+      #container #columncontainer #news #headlinecontainer {
+        width: 50%;
         height: 100%;
-        color: #2c2c2c;
+        padding-top: 5px;
+        float: left;
+        background-color: rgba(255, 255, 255, 0);
+        box-sizing: border-box;
+        background-color: #1e1e1e; }
+        #container #columncontainer #news #headlinecontainer .headline {
+          width: 98%;
+          height: 12%;
+          margin: 0 auto 5px auto;
+          background-color: transparent;
+          padding-top: 4px;
+          padding-left: 3px;
+          box-sizing: border-box; }
+          #container #columncontainer #news #headlinecontainer .headline a {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            text-decoration: none;
+            color: white; }
+            #container #columncontainer #news #headlinecontainer .headline a h1 {
+              font-size: 0.9em;
+              white-space: nowrap;
+              width: 100%;
+              overflow: hidden;
+              margin: 0;
+              height: 100%;
+              text-overflow: ellipsis; }
+        #container #columncontainer #news #headlinecontainer .headline:hover {
+          background-color: #797c81; }
+  #container #meta {
+    height: 400px;
+    width: 100%; }
+    #container #meta #metaheader {
+      height: 35px;
+      width: 97%;
+      background-color: black;
+      margin: 20px auto 5px auto;
+      padding: 5px;
+      box-shadow: 0px 1px 5px 0px white;
+      box-sizing: border-box;
+      border-radius: 3px; }
+      #container #meta #metaheader h1 {
+        margin: 0;
         text-align: center;
-        font-size: 1em; }
-    #container #features .guidebox {
-      width: 100%;
-      height: 200px;
-      background-color: white;
-      padding: 8px;
-      margin-bottom: 8px;
-      border-top: 4px solid #61d553;
+        font-size: 1.3em;
+        color: white; }
+    #container #meta #metabox {
+      height: 350px;
+      width: 97%;
+      margin: auto;
+      position: relative;
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.7); }
+      #container #meta #metabox #topcharacters {
+        width: 50%;
+        height: 100%;
+        background-color: #d1d2d4;
+        padding: 5px;
+        box-sizing: border-box;
+        float: left; }
+        #container #meta #metabox #topcharacters .character {
+          height: 135px;
+          width: 97px;
+          margin: 5px;
+          float: left;
+          background-color: #d1d2d4;
+          overflow: hidden;
+          border-top: 5px solid #F40D2A;
+          box-sizing: border-box;
+          box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.7); }
+          #container #meta #metabox #topcharacters .character img {
+            max-height: 130%;
+            max-width: 100%; }
+        #container #meta #metabox #topcharacters .character:hover {
+          background-color: #f99c23;
+          box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.7); }
+      #container #meta #metabox #topteamcomps {
+        width: 50%;
+        height: 100%;
+        background-color: #1e1e1e;
+        float: left; }
+        #container #meta #metabox #topteamcomps .teamcomp {
+          width: 100%;
+          height: 80px;
+          background-color: rgba(50, 50, 50, 0.8);
+          margin-top: 13px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: distribute;
+              justify-content: space-around; }
+          #container #meta #metabox #topteamcomps .teamcomp img {
+            height: 100%;
+            width: 52.25px;
+            float: left;
+            display: block; }
+
+#features {
+  width: 27%;
+  height: 300px;
+  margin-left: 20px; }
+  #features #featuresheader {
+    height: 35px;
+    width: 100%;
+    background-color: black;
+    margin: 10px auto 5px auto;
+    border-radius: 3px;
+    box-shadow: 0px 1px 5px 0px white; }
+    #features #featuresheader h1 {
+      margin: 0;
+      padding: 7px 0 0 10px;
+      height: 100%;
+      color: white;
+      text-align: center;
+      font-size: 1em; }
+  #features .guidebox {
+    width: 100%;
+    height: 200px;
+    background-color: #d1d2d4;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-top: 2px solid #F40D2A;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.7); }
+    #features .guidebox .label {
+      width: 50%;
+      height: 30px;
+      background-color: #f99c23;
+      position: absolute;
+      right: 0;
+      text-align: left;
+      padding-left: 10px;
+      padding-top: 5px;
+      border-bottom-left-radius: 1.2em;
       box-sizing: border-box; }
-      #container #features .guidebox .guideboximage {
-        width: 45%;
-        height: 100%; }
-      #container #features .guidebox .image1 {
-        background: url("../images/tracer.jpg");
-        background-size: cover; }
-      #container #features .guidebox .image2 {
-        background: url("../images/winston.jpg");
-        background-size: cover; }
+    #features .guidebox .name {
+      top: 20px; }
+    #features .guidebox .views {
+      top: 70px; }
+    #features .guidebox .goto {
+      top: 120px;
+      background-color: rgba(43, 195, 242, 0.8); }
+    #features .guidebox .guideboximage {
+      width: 45%;
+      height: 100%; }
+    #features .guidebox .image1 {
+      background: url("../images/heroeshead/tracer.png");
+      background-size: cover; }
+    #features .guidebox .image2 {
+      background: url("../images/heroeshead/winston.png");
+      background-size: cover; }
+    #features .guidebox .image3 {
+      background: url("../images/heroeshead/symmetra.png");
+      background-size: cover; }
 
 footer {
   width: 100%;
-  height: 200px;
-  background-color: white;
+  height: 170px;
+  background-color: black;
   position: relative;
-  margin-top: 70px; }
+  margin-top: 270px; }
+  footer #footercontent {
+    width: 80%;
+    height: 170px;
+    background-color: black;
+    margin: auto; }
+    footer #footercontent #logobox {
+      width: 30%;
+      height: 170px;
+      margin-right: 0;
+      float: left;
+      box-sizing: border-box;
+      border-right: 1px solid gray; }
+      footer #footercontent #logobox img {
+        width: 120px;
+        margin: auto;
+        display: block;
+        -ms-transform: translateY(50%);
+            transform: translateY(50%); }
+    footer #footercontent #social {
+      width: 70%;
+      height: 100%;
+      float: left;
+      color: white;
+      padding-left: 20px;
+      padding-top: 20px;
+      box-sizing: border-box; }
+      footer #footercontent #social i {
+        margin-right: 20px; }
+      footer #footercontent #social .leftmargin {
+        margin-left: 150px; }
 
 #login-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 2;
+  z-index: 50;
   margin: 0;
   display: none; }
+  #login-overlay #exit {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100; }
+  #login-overlay #loginbox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+    margin: auto;
+    background-color: white;
+    width: 270px;
+    height: 340px;
+    display: block; }
 
 @media (max-width: 600px) {
   #container #features {
@@ -261,6 +377,8 @@ footer {
     width: 100%; } }
 
 @media (max-width: 950px) {
+  footer #footercontent {
+    width: 100%; }
   #container #features {
     height: 770px; }
   #container #columncontainer {

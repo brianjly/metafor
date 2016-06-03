@@ -1,12 +1,13 @@
-$black: #1D1D1E;
-$yellow: #FFCE0F;
-$red: #8A2632;
-$green: #61d553;
+$black: rgb(59,62,67);
+$yellow: rgb(249,156,35);
+$red: #F40D2A;
+$dark: rgb(30, 30, 30);
+$opaque: rgba(0,0,0,0);
 
-$header: rgba(22,22,22,0.1);
-$headerhover: rgba(22,22,22,0.3);
-$featureheader: rgb(43, 195, 242);
-$characterselect: #9a6b92;
+$header: rgba(209,210,212,1);    ///light grey
+$headerhover: rgba(121,124,129,1);      ////dark grey
+$featureheader: rgba(43, 195, 242, 0.8);    ///blue
+
 
 @font-face {
     font-family: goodtimes;
@@ -14,7 +15,7 @@ $characterselect: #9a6b92;
 }
 
 body {
-  background-color: $black;
+  background-color: $header;
   font-family: 'goodtimes', sans-serif;
   font-style: italic;
 
@@ -25,18 +26,19 @@ body {
 }
 
 
-#whiteback{
-  height: 325px;
+#particles-js{
+  height:60%;
   width: 100%;
-  background-color: white;
-  background: linear-gradient(white 50%, $black);
-  background: -webkit-linear-gradient(white 50%, $black);
-  background: -moz-linear-gradient(white 50%, $black);
+  background-color: black;
+  background: linear-gradient(black 70%, $header);
+  background: -webkit-linear-gradient(black 70%, $header);
+  background: -moz-linear-gradient(black 70%, $header);
 
-  position: absolute;
+  position: fixed;
   z-index: -1;
 
 }
+
 
 ///////////////////////////////////////////////////NAVBAR
 
@@ -139,7 +141,6 @@ nav {
   position: absolute;
   left:-20px;
   top: 10px;
-  opacity: 0.7;
 
   z-index: 0;
 
@@ -151,7 +152,7 @@ nav {
   width: 90%;
 
   margin: 10px auto;
-  top:70px;
+  top:270px;
   position: relative;
   padding: 10px;
   display: flex;
@@ -173,8 +174,9 @@ nav {
   #news{
 
     width: 100%;
-    height: 300px;
+    height: 250px;
     background-color: rgba(255,255,255, 0);
+
 
     .newsimage1{
       background: url("../images/tracer.jpg");
@@ -183,7 +185,7 @@ nav {
 
     .newsitem{
       width:97%;
-      height:300px;
+      height:250px;
       margin:10px 15px;
       box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.5);
 
@@ -203,20 +205,37 @@ nav {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         float:left;
+        position: relative;
 
 
+        .title:before{
+          content: "";
+          position: absolute;
+          z-index: 0;
+          width: 97%;
+          height:55px;
+          background-color: black;
+
+
+          filter        : blur(1px);
+          -moz-filter   : blur(1px);
+          -webkit-filter: blur(1px);
+        }
 
         .title{
           width: 100%;
-          background-color: rgba(0,0,0,0.4);
           font-size: 0.8em;
-          height:50px;
+          height:55px;
+          z-index: 1;
+
 
           h1{
-            float:left;
-            padding-left: 10px;
             width: 100%;
             color: white;
+            position: absolute;
+            z-index: 5;
+            }
+
           }
 
         }
@@ -228,18 +247,48 @@ nav {
         height:100%;
         padding-top: 5px;
         float:left;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0);
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+        background-color: $dark;
+
+
 
 
         .headline{
           width:98%;
-          height:18%;
+          height:12%;
           margin: 0 auto 5px auto;
-          background-color: $header;
+          background-color: $opaque;
+          padding-top: 4px;
+          padding-left: 3px;
+
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+
+
+          a{
+            height:100%;
+            width: 100%;
+            background-color: black;
+            text-decoration: none;
+            color: white;
+
+            h1{
+              font-size: 0.9em;
+              white-space: nowrap;
+              width: 100%;
+              overflow: hidden;
+              margin: 0;
+              height:100%;
+              text-overflow: ellipsis;
+            }
+          }
         }
+
 
         .headline:hover{
           background-color: $headerhover;
@@ -259,34 +308,44 @@ nav {
 
 
     #metaheader{
-      height:50px;
+      height:35px;
       width:97%;
-      background-color: $featureheader;
+      background-color: black;
       margin: 20px auto 5px auto;
-      padding: 0;
+      padding: 5px;
+      box-shadow: 0px 1px 5px 0px rgba(255,255,255,1);
+
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border-radius: 3px;
+
 
 
 
       h1{
         margin: 0;
-        padding-top: 8px;
         text-align: center;
-        font-size: 1.7em;
+        font-size: 1.3em;
+        color: white;
 
         }
       }
 
     #metabox{
-      height:300px;
+      height:350px;
       width: 97%;
       margin: auto;
+      position: relative;
+      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.7);
 
 
       #topcharacters{
         width: 50%;
         height: 100%;
-        background-color: white;
-        padding: 5px;
+        background-color: $header;
+        padding:5px;
+
 
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -300,11 +359,12 @@ nav {
           float: left;
           background-color: $header;
           overflow: hidden;
-          border-top: 4px solid $red;
+          border-top:5px solid $red;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
           box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.7);
+
 
 
 
@@ -316,24 +376,38 @@ nav {
         }
 
         .character:hover{
-          background-color: $headerhover;
+          background-color: $yellow;
+          box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.7);
 
 
-        }
+          }
 
       }
 
       #topteamcomps{
         width: 50%;
         height: 100%;
-        background-color: rgb(92, 92, 92);
+        background-color: $dark;
         float: left;
 
         .teamcomp{
           width:100%;
-          height: 60px;
-          background-color: white;
-          margin-top: 30px;
+          height: 80px;
+          background-color: rgba(50,50,50,0.8);
+          margin-top: 13px;
+          display: flex;
+          -webkit-justify-content: space-around;
+          justify-content: space-around;
+
+          img{
+            height:100%;
+            width: 52.25px;
+            float:left;
+            display:block;
+
+
+
+          }
         }
 
 
@@ -354,56 +428,98 @@ nav {
 
 
     #featuresheader{
-      height:50px;
+      height:35px;
       width:100%;
-      background-color: $featureheader;
+      background-color: black;
       margin: 10px auto 5px auto;
+      border-radius: 3px;
+      box-shadow: 0px 1px 5px 0px rgba(255,255,255,1);
+
+
 
 
 
       h1{
         margin: 0;
-        padding: 12px 0 0 10px;
+        padding: 7px 0 0 10px;
         height:100%;
-        color: rgb(44, 44, 44);
+        color: white;
         text-align: center;
         font-size: 1em;
+
 
       }
     }
     .guidebox{
       width:100%;
       height:200px;
-      background-color: white;
+      background-color: $header;
       padding: 8px;
       margin-bottom: 8px;
-      border-top: 4px solid $green;
+      border-top: 2px solid $red;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
+      position: relative;
+      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.7);
+
+
+      .label{
+        width:50%;
+        height:30px;
+        background-color: $yellow;
+        position: absolute;
+        right:0;
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 5px;
+
+        border-bottom-left-radius: 1.2em;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+
+      .name{
+        top:20px;
+      }
+
+      .views{
+        top:70px;
+      }
+
+      .goto{
+        top:120px;
+        background-color: $featureheader;
+      }
+
+
 
       .guideboximage{
         width:45%;
         height:100%;
 
-      }
+        }
 
       .image1{
-        background: url('../images/tracer.jpg');
+        background: url('../images/heroeshead/tracer.png');
         background-size: cover;
-
       }
 
       .image2{
-        background: url('../images/winston.jpg');
+        background: url('../images/heroeshead/winston.png');
         background-size: cover;
+      }
 
-
+      .image3{
+        background: url('../images/heroeshead/symmetra.png');
+        background-size: cover;
       }
     }
 
 
-  }
+
 }
 
 
@@ -411,12 +527,64 @@ nav {
 footer{
 
     width:100%;
-    height:200px;
-    background-color: white;
+    height:170px;
+    background-color: black;
     position: relative;
-    margin-top: 70px;
+    margin-top: 270px;
+
+    #footercontent{
+      width:80%;
+      height:170px;
+      background-color: black;
+      margin: auto;
+
+      #logobox{
+        width:30%;
+        height: 170px;
+        margin-right: 0;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
 
 
+        border-right: 1px solid gray;
+
+
+        img{
+          width:120px;
+          margin: auto;
+          display: block;
+
+          transform: translateY(50%);
+
+          }
+
+        }
+
+      #social{
+        width: 70%;
+        height:100%;
+        float: left;
+        color:white;
+        padding-left: 20px;
+        padding-top:20px;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        i{
+          margin-right: 20px;
+        }
+
+        .leftmargin{
+          margin-left: 150px;
+        }
+
+      }
+
+      }
   }
 
 
@@ -426,10 +594,31 @@ footer{
   position: fixed;
   width: 100%;
   height:100%;
-  background-color: rgba(0,0,0,0.8);
-  z-index: 2;
+  z-index: 50;
   margin:0;
   display: none;
+
+  #exit{
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    width: 100%;
+    height:100%;
+    z-index: 100;
+  }
+  #loginbox{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom:0;
+    z-index: 200;
+
+    margin: auto;
+    background-color: white;
+    width: 270px;
+    height:340px;
+    display: block;
+  }
 }
 
 @media (max-width:600px){
@@ -471,6 +660,10 @@ footer{
 
 
 @media (max-width:950px){
+
+    footer #footercontent{
+      width:100%;
+    }
 
     #container #features{
         height:770px;

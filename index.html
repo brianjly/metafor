@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MetaFor - Meta For Overwatch Game</title>
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100,600' rel='stylesheet' type='text/css'>
@@ -15,11 +16,21 @@
 <body>
 
 
-  <img src="images/logo.png" id="logo"/>
 
-  <div id="whiteback"></div>
 
-  <div id="login-overlay"></div>
+  <div id="particles-js"></div>
+
+  <div id="login-overlay">
+    <div id="loginbox">
+
+    </div>
+
+    <div id="exit">
+
+    </div>
+
+  </div>
+
 
   <nav>
     <ul>
@@ -30,7 +41,7 @@
 
     </ul>
 
-    <button>LOGIN</button>
+    <button id="loginbutton">LOGIN</button>
     <img src="images/search.png" id="searchimg">
     <form><input id="searchbar" type="text" placeholder="Search for heroes, items, etc."></form>
 
@@ -53,11 +64,15 @@
         </div>
 
         <div id="headlinecontainer">
-          <div class="headline"><h1></h1></div>
-          <div class="headline"><h1></h1></div>
-          <div class="headline"><h1></h1></div>
-          <div class="headline"><h1></h1></div>
-          <div class="headline"><h1></h1></div>
+          <div class="headline"><a href="#"><h1>incoming buffs for tracer next patch, be aware</h1></a></div>
+          <div class="headline"><a href="#"><h1>OVERWATCH IS BACK: UNCERTAINTY AND HOPE AFTER UN CONFIRMS VIGILANTE ACTIVITY</h1></a></div>
+          <div class="headline"><a href="#"><h1>OVERWATCH DIGITAL COMIC: "MISSION STATEMENT"</h1></a></div>
+          <div class="headline"><a href="#"><h1>OVERWATCH LAUNCH PROTOCOLS: EVERYTHING YOU NEED TO KNOW</h1></a></div>
+          <div class="headline"><a href="#"><h1>LUMÉRICO VISION FOR MEXICO UNVEILED, BUT THREATS TO SAFETY AND SECURITY REMAIN</h1></a></div>
+          <div class="headline"><a href="#"><h1>UNLOCK OVERWATCH CINEMATICS AT A THEATER NEAR YOU</h1></a></div>
+          <div class="headline"><a href="#"><h1>UNLOCK OVERWATCH CINEMATICS AT A THEATER NEAR YOU</h1></a></div>
+
+
         </div>
       </div>
     </div>
@@ -78,15 +93,36 @@
           <div class="character"><img src="images/heroeshead/tracer.png"/></div>
           <div class="character"><img src="images/heroeshead/lucio.png"/></div>
           <div class="character"><img src="images/heroeshead/reinhardt.png"/></div>
-          <div class="character"><img src="images/heroeshead/genji.png"/></div>
+          <div class="character"><img src="images/heroeshead/mercy.png"/></div>
           <div class="character"><img src="images/heroeshead/winston.png"/></div>
 
         </div>
 
         <div id="topteamcomps">
-          <div class="teamcomp"></div>
-          <div class="teamcomp"></div>
-          <div class="teamcomp"></div>
+          <div class="teamcomp">
+            <img src="images/heroeshead/mercy.png" />
+            <img src="images/heroeshead/mei.png" />
+            <img src="images/heroeshead/mccree.png" />
+            <img src="images/heroeshead/reinhardt.png" />
+            <img src="images/heroeshead/widowmaker.png" />
+            <img src="images/heroeshead/lucio.png" />
+          </div>
+          <div class="teamcomp">
+            <img src="images/heroeshead/reaper.png" />
+            <img src="images/heroeshead/lucio.png" />
+            <img src="images/heroeshead/roadhog.png" />
+            <img src="images/heroeshead/bastion.png" />
+            <img src="images/heroeshead/hanzo.png" />
+            <img src="images/heroeshead/mercy.png" />
+          </div>
+          <div class="teamcomp">
+            <img src="images/heroeshead/zenyatta.png" />
+            <img src="images/heroeshead/zarya.png" />
+            <img src="images/heroeshead/mccree.png" />
+            <img src="images/heroeshead/lucio.png" />
+            <img src="images/heroeshead/roadhog.png" />
+            <img src="images/heroeshead/hanzo.png" />
+          </div>
 
 
         </div>
@@ -104,23 +140,26 @@
       <div id="featuresheader"><h1>FEATURED GUIDES</h1></div>
 
       <div class="guidebox">
-        <div class="guideboximage image1"/>
-
-        </div>
-
-      </div>
-
-      <div class="guidebox">
-        <div class="guideboximage image2"/>
-
-        </div>
+        <div class="guideboximage image1"></div>
+        <div class="label name">BY JERICHO</div>
+        <div class="label views">views: 1,257</div>
+        <div class="label goto">SEE GUIDE</div>
 
       </div>
 
       <div class="guidebox">
-        <div class="guideboximage"/>
+        <div class="guideboximage image2"></div>
+        <div class="label name">BY SLAYER</div>
+        <div class="label views">views: 2,355</div>
+        <div class="label goto">SEE GUIDE</div>
 
-        </div>
+      </div>
+
+      <div class="guidebox">
+        <div class="guideboximage image3"></div>
+        <div class="label name">BY JERRY</div>
+        <div class="label views">views: 2,011</div>
+        <div class="label goto">SEE GUIDE</div>
 
       </div>
 
@@ -130,13 +169,41 @@
   </div>
 
   <footer>
+    <div id="footercontent">
 
+      <div id="logobox">
+        <img src="images/logo.png" />
+      </div>
+
+      <div id="social">
+        <h2>COPYRIGHT METAFOR INC 2016 ©</h2>
+
+        <span class="fa-stack fa-lg leftmargin">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>
+
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x"></i>
+        </span>
+
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-twitch fa-stack-1x"></i>
+        </span>
+
+      </div>
+
+    </div>
   </footer>
 
 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 <script src="js/app.js"></script>
 
 

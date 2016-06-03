@@ -1,46 +1,10 @@
-
-var nav = $("nav");
-var particles = $("#particles-js")
-
-$(window).scroll(function(){
-  if ($(this).scrollTop() > 50) {
-    nav.addClass("fixnav");
-  } else {
-    nav.removeClass("fixnav");
-  }
-
-
-
-});
-
-
-
-
-$(function(){
-
-  $("#searchimg").click(function(){
-      $("#searchbar").fadeToggle();
-  });
-
-  $("#loginbutton").click(function(){
-      $("#login-overlay").css("display","block")
-  });
-
-  $("#exit").click(function(){
-      $("#login-overlay").css("display","none")
-  });
-
-});
-
-particlesJS('particles-js',
-
 {
   "particles": {
     "number": {
-      "value": 251,
+      "value": 160,
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area": 800
       }
     },
     "color": {
@@ -72,7 +36,7 @@ particlesJS('particles-js',
       }
     },
     "size": {
-      "value": 4.008530152163807,
+      "value": 3,
       "random": true,
       "anim": {
         "enable": false,
@@ -144,5 +108,3 @@ particlesJS('particles-js',
   },
   "retina_detect": true
 }
-
-);
