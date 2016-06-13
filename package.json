@@ -1,7 +1,7 @@
 {
   "name": "metafor",
   "version": "1.0.0",
-  "description": "",
+  "description": "Overwatch site using sass template from zurb",
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -17,6 +17,16 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "ember": "^1.0.0-pre.2",
+    "express": "^4.13.4",
     "gulp-autoprefixer": "^3.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianjly/metafor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brianjly/metafor/issues"
+  },
+  "homepage": "https://github.com/brianjly/metafor#readme"
 }

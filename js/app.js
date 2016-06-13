@@ -1,19 +1,36 @@
+<!--Scrolling Features -->
 
 var nav = $("nav");
 var particles = $("#particles-js")
 
 $(window).scroll(function(){
-  if ($(this).scrollTop() > 50) {
+
+  s = $(this).scrollTop()
+
+  if (s > 50) {
     nav.addClass("fixnav");
   } else {
     nav.removeClass("fixnav");
   }
 
+  particles.css("top","-" + (s/2) +"px");
 
 
 });
 
+<!--Vuejs-->
 
+new Vue({
+
+  el:"#app",
+
+  data: {message: "Wassup dudes"}
+
+});
+
+
+
+<!--jQuery -->
 
 
 $(function(){
@@ -32,12 +49,18 @@ $(function(){
 
 });
 
+
+
+
+
+<!--ParticlesJS json data -->
+
 particlesJS('particles-js',
 
 {
   "particles": {
     "number": {
-      "value": 251,
+      "value": 151,
       "density": {
         "enable": true,
         "value_area": 1000
@@ -57,13 +80,13 @@ particlesJS('particles-js',
       },
       "image": {
         "src": "img/github.svg",
-        "width": 100,
-        "height": 100
+        "width": 60,
+        "height": 60
       }
     },
     "opacity": {
       "value": 1,
-      "random": true,
+      "random": false,
       "anim": {
         "enable": true,
         "speed": 1,
